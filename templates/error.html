@@ -1,0 +1,59 @@
+{% extends 'base.html' %}  {# 将当前页面继承自base.html母版 #}
+{%  block content %}
+<link rel="stylesheet" type="text/css" href="/video/css/index.css">
+<script src="/video/javascript/jquery.min.js"></script>
+<div style="height: auto;overflow: scroll">
+    <center><h1 style="color: white">异常情况</h1></center>
+    <div id="v1" class="inline1">
+        <video  src="https://blz-videos.nosdn.127.net/1/HearthStone/f6cd63b590d416821d3e27e0.mp4" controls="controls" class="my-psVideo" id="my-video1" poster="img/profile.jpg" preload="metadata">
+        </video>
+    </div>
+
+    <div id="v2" class="inline1">
+         <video src="https://blz-videos.nosdn.127.net/1/HearthStone/f6cd63b590d416821d3e27e0.mp4" controls="controls" class="my-psVideo"  poster="img/profile.jpg" preload="metadata">
+         </video>
+    </div>
+    <div id="v3" class="inline2">
+        <video src="https://blz-videos.nosdn.127.net/1/HearthStone/f6cd63b590d416821d3e27e0.mp4" controls="controls" class="my-psVideo"  poster="img/profile.jpg" preload="metadata">
+        </video>
+    </div>
+
+    <div id="v4" class="inline2">
+        <video src="https://blz-videos.nosdn.127.net/1/HearthStone/f6cd63b590d416821d3e27e0.mp4" controls="controls" class="my-psVideo"  poster="img/profile.jpg" preload="metadata">
+        </video>
+    </div>
+</div>
+<style>
+    body{
+        background: grey;
+    }
+
+    .inline1{
+      float: left;
+    }
+
+    .inline2{
+      float: left;
+  }
+
+    #v1{
+        width: 50%;
+        height: 50%;
+    }
+
+    #v2{
+        width: 50%;
+        height: 50%;
+    }
+
+    #v3{
+          width: 50%;
+          height: 50%;
+    }
+    #v4{
+            width: 50%;
+            height: 50%;
+    }
+</style>
+
+{% endblock %}

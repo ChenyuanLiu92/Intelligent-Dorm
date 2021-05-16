@@ -1,15 +1,17 @@
 import os
+from datetime import timedelta
 import pymysql
 from flask import Flask, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
+#from demo_cam import start_monitoring
 
 pymysql.install_as_MySQLdb()
 
 app = Flask(__name__, template_folder='templates', static_url_path='/', static_folder='static')
 app.config['SECRET_KEY'] = os.urandom(24)  # 使用session时用到
-
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)  # 设置session的过期时间为7天
 # 使用集成方式处理SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:zhuoshilong@localhost:3306/dormguard?charset=utf8'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:liuchenyuan@localhost:3306/dormguard?charset=utf8'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # True:跟踪数据库的修改，及时发送信号
 app.config['SQLALCHEMY_POOL_SIZE'] = 100  # 数据库连接池的大小。默认是数据库引擎的默认值（通常是 5）
 
@@ -35,7 +37,7 @@ def before():
     # 如果用户已经登录session['islogin']='true',则不作拦截
     url = request.path  # 读取到当前接口的地址
     # 静态资源如图片，CSS和JS代码等，可以通过后缀名来进行放行
-    pass_list = ['/login', '/register', '/test', '/vcode']
+    pass_list = ['/login', '/register', '/test', '/vcode','/room/wec','/notice_board']
     suffix = url.endswith('.png') or url.endswith('.jpg') or url.endswith('.css') or url.endswith('.jpeg') or url.endswith(
         '.js') or url.endswith('.min.js')
     if url in pass_list or suffix:
@@ -48,6 +50,9 @@ def before():
 
 
 if __name__ == '__main__':
+    # 开启人脸识别
+    # start_monitoring()
+
     # 为了避免循环引用，注册蓝图的代码必须放到main函数中
     from controller.user import *
 
@@ -55,5 +60,17 @@ if __name__ == '__main__':
 
     from controller.index import *
 
-    app.register_blueprint(index)  # 注册user的蓝图
+    app.register_blueprint(index)  # 注册index的蓝图
+
+    from  controller.room import *
+    app.register_blueprint(room)   # 注册room的蓝图
+
+    from controller.video import *
+
+    app.register_blueprint(video)  # 注册video的蓝图
+
+    from controller.notice import *
+
+    app.register_blueprint(notice)  # 注册notice的蓝图
+
     app.run(debug=True)

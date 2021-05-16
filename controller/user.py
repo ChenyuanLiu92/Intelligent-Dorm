@@ -110,3 +110,18 @@ def deluser_try():
     session.clear()
     session['islogin'] = 'false'
     return redirect(url_for('user.login'))
+
+# 用户管理宠物界面
+@user.route('/pet',methods=['POST','GET'])
+def turn_pet():
+    item = session.get('user')
+    user = Users().find_by_id_username({'id': item['id'], 'username': item['username']})
+    return render_template('userinfo/pet.html',user=user)
+
+
+@user.route('/error',methods=['POST','GET'])
+def turn_error():
+    item = session.get('user')
+    user = Users().find_by_id_username({'id': item['id'], 'username': item['username']})
+    return render_template('error.html',user=user)
+

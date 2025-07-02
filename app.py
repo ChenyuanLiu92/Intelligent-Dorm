@@ -12,6 +12,7 @@ app.config['SECRET_KEY'] = os.urandom(24)  # 使用session时用到
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)  # 设置session的过期时间为7天
 # 使用集成方式处理SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:liuchenyuan@localhost:3306/dormguard?charset=utf8'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # True:跟踪数据库的修改，及时发送信号
 app.config['SQLALCHEMY_POOL_SIZE'] = 100  # 数据库连接池的大小。默认是数据库引擎的默认值（通常是 5）
 

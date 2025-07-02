@@ -12,11 +12,9 @@
         font-size: 40px;
     }
 </style>
-
 <div style="height: auto;overflow: scroll">
    <center><h1 style="color: white">监控管理<img src="img/摄像头3.png" height="300" width="300" style="float: right"/></h1></center>
 <div id="psVideo" class="psVideo">
-
 
         <video src="https://blz-videos.nosdn.127.net/1/HearthStone/f6cd63b590d416821d3e27e0.mp4" controls="controls" class="my-psVideo" id="my-video" poster="img/profile.jpg" preload="metadata">
         </video>
@@ -68,6 +66,65 @@
                 </div>
             </div>
         </div>
+<!--
+src：嵌套的网页地址
+width:显示宽度
+height：显示高度
+scrolling：滚动条，[auto,no,yes三个值]auto为自动，no为不显示，yes为始终显示
+frameborder：iframe的边框
+-->
+<!--        <video src="https://blz-videos.nosdn.127.net/1/HearthStone/f6cd63b590d416821d3e27e0.mp4" controls="controls" class="my-psVideo" id="my-video" poster="img/profile.jpg" preload="metadata">-->
+<!--        </video>-->
+    <iframe src="http://127.0.0.1:8000/" width="800" height="500" scrolling="auto" frameborder="0"> </iframe>
+<!--        <div class="psVideo-loading">-->
+<!--            <span></span>-->
+<!--            <span></span>-->
+<!--            <span></span>-->
+<!--        </div>-->
+<!--        <div class="psVideo-play-one"></div>-->
+<!--        <div class="psVideo-shade psVideo-shade-on">-->
+<!--            <div class="psVideo-play-footer">-->
+<!--                <div class="psVideo-progress">-->
+<!--                    <span class="psVideo-timeBar"></span>-->
+<!--                </div>-->
+<!--                <div class="psVideo-play-btn psVideo-stop"></div>-->
+<!--                <div class="psVideo-time">-->
+<!--                    <span id="currentTime">00:00</span>-->
+<!--                    <span>/</span>-->
+<!--                    <span id="duration">00:00</span>-->
+<!--                </div>-->
+<!--                <div class="psVideo-dan">-->
+<!--                    <input type="text" class="psVideo-dan-input" placeholder="点击输入弹幕,回车键发送"/>-->
+<!--                    <span class="psVideo-dan-btn">发送</span>-->
+<!--                </div>-->
+<!--                <div class="psVideo-right-btn">-->
+<!--                    <div class="psVideo-btn all"></div>-->
+<!--                    <div class="psVideo-btn loop" id="loop"></div>-->
+<!--                    <div class="psVideo-btn set">-->
+<!--                        <div class="set-list">-->
+<!--                            <div class="play-speed">播放速度</div>-->
+<!--                            <div class="play-speed-list">-->
+<!--                                <span id="speed05Btn">X0.5</span>-->
+<!--                                <span class="moren" id="speed1Btn">X1</span>-->
+<!--                                <span id="speed2Btn">X2</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="konge1"></div>-->
+<!--                    </div>-->
+<!--                    <div class="psVideo-btn huazhi">自动</div>-->
+<!--                    <div class="psVideo-btn sound" id="soundBtn">-->
+<!--                        <div class="sound-list">-->
+<!--                            <div class="sound-number">90</div>-->
+<!--                            <div class="volume">-->
+<!--                                <span class="volumeBar"></span>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="konge"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
     </div>
 
     <div id="footbox">
@@ -79,13 +136,13 @@
            <center><h1 style="color: white">2021年5月18日上午7时12分33秒 寝室成员B离开 </h1></center>
         </div>
 
-        <div id="footbox3">
-          <center><h1 style="color: white">2021年5月18日上午7时09分11秒 寝室成员C离开 </h1></center>
+        <div id="footbox4">
+           <center><h1 style="color: white">2021年5月18日上午7时12分33秒 寝室成员C离开 </h1></center>
         </div>
+    </div>
 
 
-    </div>
-    </div>
+
 <style>
 
 
@@ -112,6 +169,12 @@
         border-bottom: 5px solid white;
         height: 75px;
     }
+
+      #footbox4{
+        border-bottom: 5px solid white;
+        height: 75px;
+    }
+
 
     #psVideo{
         border-top:10px solid white;

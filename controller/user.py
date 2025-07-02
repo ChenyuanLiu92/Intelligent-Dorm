@@ -124,4 +124,3 @@ def turn_error():
     item = session.get('user')
     user = Users().find_by_id_username({'id': item['id'], 'username': item['username']})
     return render_template('error.html',user=user)
-

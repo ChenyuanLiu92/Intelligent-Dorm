@@ -270,7 +270,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Contributors
 
-- **Chenyuan Liu** - *Project Creator* - [@Chenyuan Liu](https://github.com/chenyuanliu92)
+- **Chenyuan Liu** - *Project Creator* - [@Chenyuan Liu & 88Coding](https://github.com/chenyuanliu92) 
+- **Shilong Zhuo** - *Team Mate* -[@Shilong Zhuo](https://github.com/shilongzhuo)
 
 ## 🙏 Acknowledgments
 
@@ -290,6 +291,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ If this project helps you, please give us a Star!**
 
-*Made with ❤️ by the I-Dorm-Guard Team*
+*Made with ❤️ by the Intelligent-Dorm Team*
 
 </div>

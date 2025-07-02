@@ -79,8 +79,8 @@ An intelligent dormitory security system based on facial recognition technology,
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/i-dorm-guard.git
-cd i-dorm-guard
+git clone https://github.com/ChenyuanLiu92/Intelligent-Dorm.git
+cd Intelligent-Dorm
 ```
 
 ### 2. Install Dependencies
@@ -281,7 +281,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- Issues: [GitHub Issues](https://github.com/yourusername/i-dorm-guard/issues)
+- Issues: [GitHub Issues](https://github.com/ChenyuanLiu92/Intelligent-Dorm/issues)
 
 ---
 
